@@ -1,0 +1,358 @@
+:root {
+    --primary: #00ff88;
+    --secondary: #00e1ff;
+    --bg: #020205;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    margin: 0; background: var(--bg); color: white;
+    font-family: 'Inter', sans-serif; overflow: hidden;
+}
+
+.dashboard-container { display: flex; height: 100vh; }
+
+/* Sidebar Design */
+.sidebar {
+    width: 280px; background: rgba(255, 255, 255, 0.01);
+    border-right: 1px solid var(--border); padding: 40px 20px;
+    display: flex; flex-direction: column; backdrop-filter: blur(20px);
+}
+
+.logo-area { text-align: center; margin-bottom: 50px; }
+.logo-box {
+    width: 60px; height: 60px; background: var(--primary);
+    margin: 0 auto 15px; border-radius: 15px; display: flex;
+    align-items: center; justify-content: center; font-family: 'Orbitron';
+    color: black; font-weight: 900; box-shadow: 0 0 25px var(--primary);
+}
+
+.nav-link {
+    padding: 15px 20px; color: #888; text-decoration: none;
+    border-radius: 12px; margin-bottom: 8px; transition: 0.4s;
+    display: flex; align-items: center; font-size: 14px; font-weight: 500;
+}
+
+.nav-link span { margin-right: 15px; font-size: 18px; }
+.nav-link:hover, .nav-link.active {
+    background: var(--card-bg); color: var(--primary);
+    transform: translateX(8px); text-shadow: 0 0 10px var(--primary);
+}
+
+.logout-btn { margin-top: auto; color: #ff4d4d !important; border: 1px solid rgba(255, 77, 77, 0.2); }
+.logout-btn:hover { background: rgba(255, 77, 77, 0.1) !important; box-shadow: 0 0 20px rgba(255, 77, 77, 0.2); }
+
+/* Main Content Area */
+.main-content { flex: 1; padding: 40px; overflow-y: auto; background: radial-gradient(circle at top right, #0a1a12, transparent); }
+
+.top-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+.glow-text { color: var(--primary); font-weight: 800; text-transform: uppercase; }
+.system-time { font-family: 'Orbitron'; font-size: 20px; color: var(--secondary); }
+
+/* Stats Cards */
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 40px; }
+.stat-card {
+    background: var(--card-bg); padding: 30px; border-radius: 25px;
+    border: 1px solid var(--border); transition: 0.4s;
+}
+.stat-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
+
+.progress-bar { height: 4px; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 15px; overflow: hidden; }
+.fill { height: 100%; background: var(--primary); box-shadow: 0 0 10px var(--primary); }
+/* Sharp & Clean Modal View */
+.modal {
+    display: none; position: fixed; z-index: 1000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* පස්ස පැත්ත පේනවා, හැබැයි පොඩ්ඩක් කළුයි */
+}
+
+.modal-content {
+    background: #0d1117; /* Dark Pro background */
+    margin: 5% auto; padding: 40px;
+    border: 2px solid var(--primary); /* තද කොළ පාට border එකක් */
+    border-radius: 20px; width: 450px;
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.4); /* Glow effect එක */
+    color: white; position: relative;
+    animation: slideDown 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@keyframes slideDown { from {transform: translateY(-50px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+
+/* Password Area - No Blur, just secure looking */
+.pass-display {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-family: 'Orbitron';
+    letter-spacing: 2px;
+    color: var(--secondary);
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
+    left: 0; top: 0; 
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease; /* Fade effect එක සඳහා */
+}
+/* AntusPlay Cyber-Premium Theme */
+:root {
+    --neon-green: #00ff41;
+    --dark-bg: #050505;
+    --glass-bg: rgba(20, 20, 20, 0.7);
+    --border-glow: rgba(0, 255, 65, 0.3);
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Fixes */
+.sidebar {
+    width: 260px;
+    background: #000;
+    border-right: 1px solid #1a1a1a;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+/* Main Content එක දකුණු පැත්තට සම්පූර්ණයෙන් විහිදීම */
+.main-content {
+    flex-grow: 1; 
+    padding: 40px;
+    background: radial-gradient(circle at top right, #0a1a0a, #050505);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Boxes ලස්සන කිරීම (Glassmorphism) */
+.config-box, .cyber-card, .glass-table-container, .stat-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px); /* මීදුම වගේ effect එකක් */
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 12px; /* රළු කොන් වටකුරු කිරීම */
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.config-box:hover, .stat-card:hover {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 15px var(--border-glow);
+    transform: translateY(-5px);
+}
+
+/* Header Text Finish එක */
+.glitch-text {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--neon-green);
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    margin-bottom: 5px;
+}
+
+/* Input Fields පිරිසිදු කිරීම */
+input[type="text"], input[type="number"], input[type="email"], select, textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
+    border-radius: 8px; /* Input boxes වල කොන් වටකුරු කිරීම */
+    padding: 12px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 8px var(--border-glow);
+}
+
+/* Execute Button එකට පණ දීම */
+.save-btn, .execute-btn, .cyber-btn {
+    background: var(--neon-green);
+    color: #000;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px var(--neon-green);
+}
+/* Box වල කොන් වටකුරු කිරීම සහ Design එක Smooth කිරීම */
+.config-box, .stat-card, .cyber-card, .glass-table-container, .log-container {
+    background: rgba(15, 15, 15, 0.8) !important;
+    backdrop-filter: blur(10px); /* මීදුම වැනි Effect එකක් */
+    border: 1px solid rgba(0, 255, 65, 0.3) !important;
+    
+    /* මෙන්න මේ පේළියෙන් තමයි උල් කොන් නැති වෙන්නේ */
+    border-radius: 15px !important; 
+    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Mouse එක උඩට ගියාම Glow වෙන හැටි */
+.config-box:hover, .stat-card:hover {
+    border-color: #00ff41 !important;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Input Boxes වල කොන් වටකුරු කිරීම */
+input[type="text"], input[type="number"], input[type="email"], select, textarea {
+    border-radius: 8px !important;
+    border: 1px solid #333;
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    outline: none;
+}
+
+/* Button එක ලස්සන කිරීම */
+.save-btn, .execute-btn, .cyber-btn {
+    border-radius: 8px !important;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #00ff41;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
+}
+/* Input boxes වල දිග සහ පෙනුම පාලනය කිරීම */
+.input-group {
+    margin-bottom: 20px;
+    max-width: 400px; /* ඕනෑවට වඩා දිග යන එක නවත්වනවා */
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="email"] {
+    width: 100%; 
+    max-width: 350px; /* පෙට්ටිය ඇතුළේ input එකට ලස්සන දිගක් දෙනවා */
+    border-radius: 8px !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    padding: 12px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s ease;
+}
+
+/* Input එකක් click කළාම glow වෙන හැටි */
+input:focus {
+    border-color: #00ff41;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+    background: rgba(0, 255, 65, 0.05) !important;
+}
+
+/* Settings Grid එකේ පරතරය */
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+input[type="password"] {
+    width: 100%;
+    max-width: 380px;
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px !important;
+    padding: 14px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="password"]:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px var(--border-glow);
+}
+/* Dashboard container එකට flex දාන්න */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Main content එක ඉතිරි මුළු ඉඩම ගන්න ඕනේ */
+.main-content {
+    flex: 1; /* මේකෙන් තමයි දකුණු පැත්තේ ඉඩ පුරවන්නේ */
+    padding: 40px;
+    background: radial-gradient(circle at top right, #0a1a12, transparent);
+    overflow-y: auto;
+}
+
+/* Form boxes ටික මැදට ගන්න හෝ පළල පාලනය කරන්න */
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    width: 100%; /* සම්පූර්ණ පළල ගන්න */
+}
+:root {
+    --primary: #00d2ff;
+    --secondary: #9d50bb;
+    --dark-bg: #02040a;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border: rgba(0, 210, 255, 0.2);
+}
+
+/* මුළු පිටුවම */
+body {
+    background: var(--dark-bg);
+    margin: 0;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Input Boxes ලස්සන කිරීම */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    max-width: 400px; /* පෙට්ටි ඕනෑවට වඩා ඇදෙන එක පාලනය කළා */
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid var(--border);
+    border-radius: 12px !important;
+    padding: 12px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Execute Button */
+.save-btn {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border-radius: 12px !important;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}

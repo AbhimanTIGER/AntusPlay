@@ -1,0 +1,113 @@
+/* Sector Management Specific Styles */
+
+.category-wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cyber-card {
+    background: rgba(15, 15, 15, 0.8);
+    border: 1px solid #00ff41;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+}
+
+.cyber-card h3 {
+    color: #00ff41;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.inline-form {
+    display: flex;
+    gap: 10px;
+}
+
+.inline-form input {
+    flex: 1;
+    background: #000;
+    border: 1px solid #333;
+    padding: 12px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    border-radius: 4px;
+}
+
+.inline-form input:focus {
+    border-color: #00ff41;
+    outline: none;
+}
+
+/* Table Styling */
+.glass-table-container {
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid #222;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cyber-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+.cyber-table th {
+    background: #111;
+    color: #00ff41;
+    text-align: left;
+    padding: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    border-bottom: 2px solid #00ff41;
+}
+
+.cyber-table td {
+    padding: 15px;
+    border-bottom: 1px solid #222;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+.cat-name {
+    font-weight: 600;
+    color: #eee;
+}
+
+.execute-btn {
+    background: #00ff41;
+    color: #000;
+    border: none;
+    padding: 0 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.execute-btn:hover {
+    background: #00cc33;
+    box-shadow: 0 0 10px #00ff41;
+}
+
+.terminate-btn {
+    color: #ff4b4b;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #ff4b4b;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.terminate-btn:hover {
+    background: #ff4b4b;
+    color: #fff;
+}
